@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+          
+          
+          <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
+          
+          <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+          
+          <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
+          
+          <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400&display=swap" rel="stylesheet">
+  
+<style>
+	*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+/*
+#turn
+{
+    display:none;
+    width:100%;
+    height:100%;
+    z-index:99;
+    color:red;
+    text-align:center;
+    vertical-align:center;
+    background-color:white;
+    position:fixed;
+    left:0;
+    top:0;
+}
+
+@media (orientation : landscape)
+{
+    #turn{display:block ;}
+}*/
+
+.img{
+    width:10%;
+    height:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:-2;
+}
+.nav{
+    background:rgba(125,155,157,1);
+    width:100%;
+    height:70px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    position:fixed;
+    z-index:1;
+}
+
+.nav a
+{
+    padding:10px;
+    margin:3px;
+    text-decoration:none;
+    color:#66ffff;
+    cursor:pointer;
+    border-radius:4px;
+    font-family: 'Spectral', serif;
+    font-size:17px;
+    text-shadow:1px 1px 5px brown;
+}
+
+.menu a{
+    text-decoration:none;
+    color:grey;
+    font-weight:500;
+    font-family:serif;
+    padding:10px;
+    margin:10px;
+    border-radius:5px;
+    position:relative;
+}
+
+nav a:hover
+{
+    color:violet;
+    background:rgba(125,155,157,0.5);
+    text-shadow:1px 1px 5px grey;
+}
+
+.drop-icon:hover a
+{
+    background:rgba(125,155,157,0.5);
+    color:lightgreen;
+}
+.menu
+{
+    position:absolute;
+    width:100%;
+    left:0;
+    background-color:rgba(232,232,232,1);
+    display:none;
+    z-index:10;
+}
+
+
+.ham-X
+{
+    width:40px;
+    height:40px;
+    border:1px Solid violet;
+    margin:8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    cursor:pointer;
+    transition:all 0.7s ease-in-out;
+    border-radius:2px;
+}
+.hamburger{
+    
+    width:80%;
+    height:4px;
+    border-radius:3px;
+    background:grey;
+    box-shadow:0 0 2px 1px violet;
+    transition:all 0.7s ease-in-out;
+
+
+}
+
+.hamburger::before, .hamburger::after{
+    content:"";
+    width:80%;
+    height:4px;
+    border-radius:3px;
+    background:grey;
+    position:absolute;
+    box-shadow:0 0 2px 1px violet;
+    transition:all 0.7s ease-in-out;
+}
+
+.hamburger::before{
+    transform:translateY(-10px);
+}
+
+.hamburger::after{
+    transform:translateY(10px);    
+}
+
+.open .hamburger::before
+{
+    transform:rotate(45deg) translate(17px,-17px);
+}
+
+.open .hamburger::after
+{
+    transform:rotate(-45deg) translate(17px,17px);
+}
+
+.open .hamburger
+{
+    background:transparent;
+    box-shadow:none;
+    margin-left:-50px;
+}
+#msg
+{
+    width:500px;
+    height:500px;
+    border-radius:0 0 50% 0;
+    background-color:skyblue;
+    position: fixed;
+    top:-40%;
+    left:-40%;
+    z-index:9;
+    box-shadow:0 0 17px 1px red;
+}
+
+#msgg
+{
+    position:relative ;
+    top:40%;
+    left:30%;
+    margin:10px;
+    width:50%;
+    height:50%;
+    font-family:serif;
+}
+
+#msgg span{
+    color:Orange;
+    font-size:47px;
+    position:relative;
+}
+
+
+.sub
+{
+    display:none;
+    background-color:#33ff00;
+}
+
+a{display:block;}
+
+.drop-icon {  position:relative; }
+
+.drop-icon > svg
+{
+    position:absolute; 
+    top:50%;
+    right:10%;
+    transform:translateY(-50%);
+}
+.up { display:none; }
+.alter-icon .down{ display:none; }
+.alter-icon .up{ display:block;}
+.card{   
+    margin:25px;
+    margin-top:35px;
+    box-shadow:0 0 9px 1px grey;
+    border-radius:9px;
+    background:skyblue;
+
+}
+
+.card-img-top{
+    width:100px;
+    height:100px;
+    object-fit:cover;
+    margin-bottom:5px;
+    border-radius:50%;
+    float:right;
+    margin-right:-35px;
+    margin-top:-35px;
+    box-shadow:0 0 9px 1px violet;
+    clear:both;
+    border:none;
+    
+}
+
+.card-text strong{
+    font-family: 'Nunito', sans-serif;
+}
+.card-title
+{
+    font-family: 'Old Standard TT', serif;
+}
+
+.more{display:none;}
+
+.card-body p
+{
+    font-family: 'Vollkorn', serif;
+}
+
+.card-text
+{
+    font-family:'Spectral', serif;
+}
+
+</style>
+
+    
+    </head>
+    <body>
+        <div class="Container whole">
+            <header>
+                <div id="msg">
+                    <div id="msgg">
+                        <h1>Hey!</h1></br>
+                        <p><h3>You are Welcome.</h3></br><span>N</span>awab Shah Alam College of Engineering and Technology.</p>
+                    </div>
+                </div> 
+            <nav class="nav">
+                <div class="ham-X">
+                    <div class="hamburger"></div>
+                </div>
+                <a href="http://www.nsakcet.ac.in/Home">Official Site</a>
+                <a href="#">About</a>
+                <a href="#j">Contact</a>
+            </nav>
+            <div class="menu">
+                <div class="icon-course drop-icon" onclick="iconToggle('.icon-course','.coursee')">
+                    <a href="#" class="course">Course</a>
+                    <svg width="25" height="25" class="down">
+    <polyline style="color:black"
+        stroke-width:1; fill: none;"
+        points="10 10, 15 15, 20 10" />
+</svg>
+                    <svg width="25" height="25" class="up">
+    <polyline style="color:black"
+        stroke-width:1; fill: none;"
+        points="10 10, 15 5, 20 10" />
+</svg>
+                </div>
+                <div class="coursee sub">
+                    <a href="#">CSE</a>
+                    <a href="#">IT</a>
+                    <a href="#">MECHANICAL</a>
+                    <a href="#">CIVIL</a>
+                    <a href="#EEE">EEE</a>
+                </div>
+                <div class="icon-faculty drop-icon" onclick="iconToggle('.icon-faculty','.facultyy')">
+                    <a href="#" class="faculty">Faculty</a>
+                    <svg width="25" height="25" class="down">
+    <polyline style="color:black"
+        stroke-width:1; fill: none;"
+        points="10 10, 15 15, 20 10" />
+</svg>
+                    <svg width="25" height="25" class="up">
+    <polyline style="color:black"
+        stroke-width:1; fill: none;"
+        points="10 10, 15 5, 20 10" />
+</svg>
+                </div>
+                <div class="facultyy sub">
+                    <a href="#">CSE Department</a>
+                    <a href="#">IT Department</a>
+                    <a href="#">MECHANICAL Department</a>
+                    <a href="#">CIVIL Department</a>
+                    <a href="#">EEE Department</a>
+                </div>
+                <div class="icon-campus drop-icon" onclick="iconToggle('.icon-campus','.campuss')">
+                    <a href="#">Campus</a>
+                    <svg width="25" height="25" class="down">
+    <polyline style="color:black"
+        stroke-width:1; fill: none;"
+        points="10 10, 15 15, 20 10" />
+</svg>
+                    <svg width="25" height="25" class="up">
+    <polyline style="color:black"
+        stroke-width:1; fill: none;"
+        points="10 10, 15 5, 20 10" />
+</svg>
+                </div>
+                <div class="campuss sub">
+                    <a href="#">Classrooms</a>
+                    <a href="#">Computer Labs</a>
+                    <a href="#">MECHANICAL Workshops</a>
+                    <a href="#">Seminar Hall</a>
+                    <a href="#">Library</a>
+                    <a href="#">Playing ground</a>
+                    <a href="#">Parking Area</a>
+                </div>
+                <a href="#">Placement</a>
+                <a href="#">Admission</a>
+                <a href="#">Map</a>
+            </div>
+        </header>
+    </div>
+ <div class="container">
+   
+    	
+        <div class="row row-cols-1 row-cols-sm-2  row-cols-xl-4 row-cols-lg-3">
+
+  
+      <div class="col mb-4">
+                <div class="card h-100 khaleel">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/Khaleel%20PP%20Image.jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Mr. Mohammed Khaleel</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>HOD and Professor</p> <p class="card-text"><strong>Skills: </strong> Theme, plugin and website development </p> <p><strong>Platform: </strong> <span class="badge bg-info">WordPress</span> <span class="badge bg-info">Weebly</span> <span class="badge bg-warning">Bootstrap</span> <span class="badge bg-success">Wix</span>
+                    
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Special title treatment</h4>
+                        <p class="card-text">
+                Contrary to popular belief, Lorem Ipsum is not simply random text<span class="less">...</span> <span class="more">It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</span>
+            </p>
+                        <span class="btn btn-info" onclick="readMore('.khaleel');">Read more</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col mb-4">
+                <div class="card h-100 farhath">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/image%20(21).jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Ms. Farhath</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Web Developer </p> <p class="card-text"><strong>Skills: </strong> Theme, plugin and website development </p> <p><strong>Platform: </strong> <span class="badge bg-info">WordPress</span> <span class="badge bg-info">Weebly</span> <span class="badge bg-warning">Bootstrap</span> <span class="badge bg-success">Wix</span>
+                    
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Special title treatment</h4>
+                        <p class="card-text">
+                Contrary to popular belief, Lorem Ipsum is not simply random text<span class="less">...</span> <span class="more">It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</span>
+            </p>
+                        <span class="btn btn-info" onclick="readMore('.farhath');">Read more</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col  mb-4">
+                <div class="card h-100 jannat">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/image%20(27).jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Jannat Ma'am</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Web Developer </p> <p class="card-text"><strong>Skills: </strong> Theme, plugin and website development </p> <p><strong>Platform: </strong> <span class="badge bg-info">WordPress</span> <span class="badge bg-info">Weebly</span> <span class="badge bg-warning">Bootstrap</span> <span class="badge bg-success">Wix</span>
+                    
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                Contrary to popular belief, Lorem Ipsum is not simply random text<span class="less">...</span> <span class="more">It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</span>
+            </p>
+                        <span class="btn btn-info" onclick="readMore('.jannat');">Read more</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col mb-4">
+                <div class="card h-100 ishrath">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/image%20(47).jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Mrs. Ishrath</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Web Developer </p> <p class="card-text"><strong>Skills: </strong> Theme, plugin and website development </p> <p><strong>Platform: </strong> <span class="badge bg-info">WordPress</span> <span class="badge bg-info">Weebly</span> <span class="badge bg-warning">Bootstrap</span> <span class="badge bg-success">Wix</span>
+                    
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                Contrary to popular belief, Lorem Ipsum is not simply random text<span class="less">...</span> <span class="more">It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</span>
+            </p>
+                        <span class="btn btn-info" onclick="readMore('.ishrath');">Read more</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 munawwar">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/image%20(28).jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Mrs. Munawwar</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Web Developer </p> <p class="card-text"><strong>Skills: </strong> Theme, plugin and website development </p> <p><strong>Platform: </strong> <span class="badge bg-info">WordPress</span> <span class="badge bg-info">Weebly</span> <span class="badge bg-warning">Bootstrap</span> <span class="badge bg-success">Wix</span>
+                    
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                Contrary to popular belief, Lorem Ipsum is not simply random text<span class="less">...</span> <span class="more">It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</span>
+            </p>
+                        <span class="btn btn-info" onclick="readMore('.munawwar');">Read more</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col mb-4">
+                <div class="card h-100 waseema">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/Scan_20170923_123948.jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Ms. Waseema Masood</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Web Developer </p> <p class="card-text"><strong>Skills: </strong> Theme, plugin and website development </p> <p><strong>Platform: </strong> <span class="badge bg-info">WordPress</span> <span class="badge bg-info">Weebly</span> <span class="badge bg-warning">Bootstrap</span> <span class="badge bg-success">Wix</span>
+                    
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                Contrary to popular belief, Lorem Ipsum is not simply random text<span class="less">...</span> <span class="more">It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</span>
+            </p>
+                        <span class="btn btn-info" onclick="readMore('.waseema');">Read more</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card h-100 Muqeet">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/Muqeet_Photo.jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Mr. Abdul Muqeet</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Web Developer </p> <p class="card-text"><strong>Skills: </strong> Theme, plugin and website development </p> <p><strong>Platform: </strong> <span class="badge bg-info">WordPress</span> <span class="badge bg-info">Weebly</span> <span class="badge bg-warning">Bootstrap</span> <span class="badge bg-success">Wix</span>
+                    
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                Contrary to popular belief, Lorem Ipsum is not simply random text<span class="less">...</span> <span class="more">It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</span>
+            </p>
+                        <span class="btn btn-info" onclick="readMore('.Muqeet');">Read more</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card h-100 Ayaz">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/image%20(49).jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Mr. Mohd Ayazuddin</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Web Developer </p> <p class="card-text"><strong>Skills: </strong> Theme, plugin and website development </p> <p><strong>Platform: </strong> <span class="badge bg-info">WordPress</span> <span class="badge bg-info">Weebly</span> <span class="badge bg-warning">Bootstrap</span> <span class="badge bg-success">Wix</span>
+                    
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                Contrary to popular belief, Lorem Ipsum is not simply random text<span class="less">...</span> <span class="more">It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</span>
+            </p>
+                        <span class="btn btn-info" onclick="readMore('.Ayaz');">Read more</span>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="col">
+                <div class="card h-100 Ruma">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/image%20(22).jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Ms. Umme Ruma</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Web Developer </p> <p class="card-text"><strong>Skills: </strong> Theme, plugin and website development </p> <p><strong>Platform: </strong> <span class="badge bg-info">WordPress</span> <span class="badge bg-info">Weebly</span> <span class="badge bg-warning">Bootstrap</span> <span class="badge bg-success">Wix</span>
+                    
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                Contrary to popular belief, Lorem Ipsum is not simply random text<span class="less">...</span> <span class="more">It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</span>
+            </p>
+                        <span class="btn btn-info" onclick="readMore('.Ruma');">Read more</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 Rawoof">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/image%20(25).jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Mr.Md. Rawoof</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Web Developer </p> <p class="card-text"><strong>Skills: </strong> Theme, plugin and website development </p> <p><strong>Platform: </strong> <span class="badge bg-info">WordPress</span> <span class="badge bg-info">Weebly</span> <span class="badge bg-warning">Bootstrap</span> <span class="badge bg-success">Wix</span>
+                    
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                Contrary to popular belief, Lorem Ipsum is not simply random text<span class="less">...</span> <span class="more">It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</span>
+            </p>
+                        <span class="btn btn-info" onclick="readMore('.Rawoof');">Read more</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-">
+                <div class="card h-100 Mujeeb">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/image%20(20).jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Mr.MA. Mujeeb</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Web Developer </p> <p class="card-text"><strong>Skills: </strong> Theme, plugin and website development </p> <p><strong>Platform: </strong> <span class="badge bg-info">WordPress</span> <span class="badge bg-info">Weebly</span> <span class="badge bg-warning">Bootstrap</span> <span class="badge bg-success">Wix</span>
+                    
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                Contrary to popular belief, Lorem Ipsum is not simply random text<span class="less">...</span> <span class="more">It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</span>
+            </p>
+                        <span class="btn btn-info" onclick="readMore('.Mujeeb');">Read more</span>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+      </div>
+    </div>
+  <!--     <img src="https://drive.google.com/uc?export=view&id=1AyaKWz2NHoOynF7KmKv67zQ2tDBKyY4T">
+       
+       <div class="Container">
+       
+      <div id="turn"><h1>Please Turn Your Device!...</h1></div> -->
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+    	
+    setTimeout(() => $("#msg").css("display","none"),2500);
+
+function iconToggle(icon,drop)
+{
+    $(icon).toggleClass("alter-icon");
+    $(drop).slideToggle(500);
+}
+
+
+$(function ()
+{  
+    $(".ham-X").click(function ()
+    {
+        $(".menu").slideToggle(500);
+        $(".ham-X").toggleClass("open");
+    }
+)});
+
+
+function readMore(profile)
+    {
+
+        if($(profile + " .less").css("display")==="none")
+        {
+            $(profile + " .more").css("display","none");
+            $(profile +  " .less").css("display","inline");
+            $(profile + " .btn").text("Read more");
+        }
+        else
+        {
+            $(profile + " .more").css("display","inline");
+            $(profile + " .less").css("display","none");
+            $(profile + " .btn").text("Read less");
+        }
+    }
+
+
+</script>
+
+    </body>
+</html>
