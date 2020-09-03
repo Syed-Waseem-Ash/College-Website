@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Page Title</title>
+        <title>Home page</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+          
+          <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
+          
+          <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400&display=swap" rel="stylesheet">
+          
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    
+    <script src="https://kit.fontawesome.com/d332accbf3.js" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
         
-        <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link href="./main.css" rel="stylesheet">
+        
     </head>
-    <body>
-        <div class="Container whole">
+    
+    
+    <body onresize="height()">
+        <div class="Container-fluid header-container">
             <header>
-                <div id="msg">
-                    <div id="msgg">
-                        <h1>Hey!</h1></br>
-                        <p><h3>You are Welcome.</h3></br><span>N</span>awab Shah Alam College of Engineering and Technology.</p>
-                    </div>
-                </div> 
-            <nav class="nav">
-                <div class="ham-X">
-                    <div class="hamburger"></div>
+                <div class="fixed-top" id="header"><div id="logo"><h5>Nawab Shah Alam Khan</h5><p>College Of Engineering And Technology</p></div>
+            <nav id="nav">
+                <div id="ham-X">
+                    <div id="hamburger"></div>
                 </div>
                <a href="#">Home</a>
                 <a href="http://www.nsakcet.ac.in/Home">Official Site</a>
-                <a href="#j">Contact</a>
-            </nav>
-            <div class="menu">
-                <div class="icon-course drop-icon" onclick="iconToggle('.icon-course','.coursee')">
+                <a href="#">Contact</a>
+            </nav></div>
+            
+            <div class="h-100" id="menu">
+                <div id="icon-course" class="drop-icon" onclick="iconToggle('#icon-course','#coursee')">
                     <a href="#" class="course">Course</a>
                     <svg width="25" height="25" class="down">
     <polyline style="color:black"
@@ -43,14 +53,13 @@
         points="10 10, 15 5, 20 10" />
 </svg>
                 </div>
-                <div class="coursee sub">
-                    <a href="#">CSE</a>
-                    <a href="#">IT</a>
+                <div id="coursee" class="sub">
+                    <a href="#">CSE & IT</a>
                     <a href="#">MECHANICAL</a>
                     <a href="#">CIVIL</a>
                     <a href="#EEE">EEE</a>
                 </div>
-                <div class="icon-faculty drop-icon" onclick="iconToggle('.icon-faculty','.facultyy')">
+                <div id="icon-faculty" class="drop-icon" onclick="iconToggle('#icon-faculty','#facultyy')">
                     <a href="#" class="faculty">Faculty</a>
                     <svg width="25" height="25" class="down">
     <polyline style="color:black"
@@ -63,14 +72,14 @@
         points="10 10, 15 5, 20 10" />
 </svg>
                 </div>
-                <div class="facultyy sub">
+                <div id="facultyy" class="sub">
                     <a href="#">CSE Department</a>
                     <a href="#">IT Department</a>
                     <a href="#">MECHANICAL Department</a>
                     <a href="#">CIVIL Department</a>
                     <a href="#">EEE Department</a>
                 </div>
-                <div class="icon-campus drop-icon" onclick="iconToggle('.icon-campus','.campuss')">
+                <div id="icon-campus" class="drop-icon" onclick="iconToggle('#icon-campus','#campuss')">
                     <a href="#">Campus</a>
                     <svg width="25" height="25" class="down">
     <polyline style="color:black"
@@ -83,7 +92,7 @@
         points="10 10, 15 5, 20 10" />
 </svg>
                 </div>
-                <div class="campuss sub">
+                <div id="campuss" class="sub">
                     <a href="#">Classrooms</a>
                     <a href="#">Computer Labs</a>
                         <a href="#">MECHANICAL Workshops</a>
@@ -98,260 +107,171 @@
             </div>
         </header>
     </div>
+    
+    <div class="empty"></div>
+    
+    <div id="msg">
+                    <div id="msgg">
+                        <h1>Hey!</h1></br>
+                        <p><h3>You are Welcome.</h3></br><span>N</span>awab Shah Alam College of Engineering and Technology.</p>
+                    </div>
+                </div>
+                
+    <div class="container p-0 m-0 body">
+        <div id="why-us" class="row p-0 m-0">
+        <div id="why-img" class="col-sm-4 p-0">
+               <img src="https://drive.google.com/uc?export=view&id=1P28xn4KsGv9qxQwLZOCSC6jk_DA8TuQ2" class="m-0" alt="...">
+         </div>
         
-        <div class="container">
-        <div class="row row-cols-1">
         
-            <div class="col my-4">
-                <div class="card h-100 m1">
-                <div class="card-header">
+                <div class="col-sm-8 p-4 para">
+                <h1>Why Us!</h1>
+                <p>We provide a favourable and competitive environment, where our students could become a better version of themselves. we motivate and inspires our students to achieve their goals.
+We day to day push our students out of their potential, so they could do the things they dream of...</p>
+                </div>
                 
-                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/maqbool.jpg" class="card-img-top img-fluid" alt="...">
-                    <h4 class="card-title">Dr. Shaik Maqbool Hussain</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>HOD and Professor</p><p class="card-text"><strong>Qualification : </strong>Ph.D</p><p><strong>Membership : </strong> <span class="badge bg-danger">Member of Intitution of Engineers(India)</span></p>
-                    <p class="card-text"><strong>Email : </strong><small>profmaqbool@gmail.com</small></p>
-                    
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Achivements</h4>
-<p class="card-text">Organized a National level work shop on “Design of Solar PV systems for Engineers” on 24,25 February 2014,at Holy Mary Institute Of Technology ,Bogaram, RR District.T.S.<span class="less">...</span> <span class="more"></br></br>Successfully Completed a workshop on "I.C.engines" in October 2014 in Holy Mary Institution of Technology, Hyderabad.in Association with CYIENT Ltd.</span>
-</p>
-        <span class="btn btn-info" onclick="readMore('.m1');">Read more</span>
+                </div>
+                
+                <div id="why-us-crs" class="row p-0 m-0">
+        <div id="crs-img" class="col-sm-4 p-0">
+                 <img src="https://drive.google.com/uc?export=view&id=1PEGEh_LymV4tw77S_CNARQxKb-UJso_J" class="m-0" alt="...">
+                 
+         </div>
         
-                    </div>
-                </div>
-            </div>
-            
-            
-             <div class="col my-4">
-                <div class="card h-100 m2">
-                <div class="card-header">
-                
-                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/Raza%20A%20Khan333.jpg" class="card-img-top img-fluid" alt="...">
-                    <h4 class="card-title">Mr. Raza Ahmed Khan</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Associate Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p>
-                    <p class="card-text"><strong>Email : </strong><small>raza_a_khan@hotmail.com</small></p>
-                    
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Achivements</h4>
-<p class="card-text">Organized a NCC "C" Certificate from the Ministry of Defence, 1994.<span class="less">...</span> <span class="more"></br></br>Technical Presentation at ASHRAE Meeting Saudi Arabian Chapter at Bahrain, March-2005</br></br>Attended a one day workshop on "eTeaching for Engineering Faculty" at JNTUH, July-2011</br></br>ISTE Life Membership (LM86783)</br></br>Attended the NPTEL Workshop at IIT-Madras, Sept-2013</br></br>Attended the 2-weeks ISTE workshops conducted by IIT-Bombay on Heat Transfer (Dec-2011), Computational Fluid Dynamics (June-2012), Engineering Mechanics (Dec-2013).</br></br>Evaluation of IAQ Status in Selected Commercial Buildings in Saudi Arabia: Role of the HVAC Systems", The 6th Saudi Engineering Conference, KFUPM, Dhahran, December 2002. 2. "An Integrated Approach to HVAC Systems Design and Operation for Energy Conservation and IAQ", National Conference on Emerging Trends in Mechanical Engineering (ETIME-2014), Dept. of Mechanical Engineering, Osmania University, Dec-2014. 
-</span></p>
+        
+                <div class="col-sm-8 p-4 para">
+                <h1>Quality Course</h1>
+                <p>We  serve our students with the best and latest topics in each field, Our college allows You to select from a rich set of courses.</br>From Software to hardware, Infrastructure to automobile so on...</br></br>We deeply focus on each and every course, we don't want our students to lack in any field.
+So, it's our duty to provide with the Origin to the trending. (Not to mention in each and every field).</br>To keep our students up-to-date, Our courses are redesigned each semester wrt the University.
 
-      <span class="btn btn-info" onclick="readMore('.m2');">Read more</span> 
-
-                    </div>
+Some of Our Courses...</p>
                 </div>
-            </div>
-            
-             <div class="col my-4">
-                <div class="card h-100 m3">
-                <div class="card-header">
                 
-                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/drmahaboob_mech.jpg" class="card-img-top img-fluid" alt="...">
-                    <h4 class="card-title">Dr. K.M. Mahaboob Sheriff</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Professor</p><p class="card-text"><strong>Qualification : </strong>Ph.D</p><p><strong>Membership : </strong> <span class="badge bg-danger">ISTE (Life Member), ORSI (Life Member) </span></p>
-                    <p class="card-text"><strong>Email : </strong><small>dr.mahaboobsheriff@gmail.com</small></p>
-                    
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Achivements</h4>
-<p class="card-text">He has completed his Ph.D from Anna University (Chennai) in 2012.<span class="less">...</span> <span class="more"></br></br>He has published number of research papers in peer reviewed International Journals and Conferences by making joint collaboration with the professors in India as well as in abroad countries such as US,UK, Australia and China.</br></br>His areas of interests are Reverse Logistics, Low Carbon Logistics, Sustainable Logistics, Sustainable Supply Chain Management Production and Operations Research.</span></p>
-
-    <span class="btn btn-info" onclick="readMore('.m3');">Read more</span>
-                    </div>
                 </div>
-            </div>
-            
-            <div class="col my-4">
-                <div class="card h-100 m4">
-                <div class="card-header">
                 
-                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/moyeed%20%20photo.jpg" class="card-img-top img-fluid" alt="...">
-                    <h4 class="card-title">Mr. Mohd Abdul Moyeed</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Associate Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p>
-                    <p class="card-text"><strong>Email : </strong><small>hadi.moid@yahoo.com</small></p>
-                    
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Key-Responsiblities.</h4>
-<p class="card-text">Lectures to both B.tech and Diploma.<span class="less">...</span> <span class="more"></br></br>Supervise B.tech Students, Internship and Research/Project work.</br></br>Manufacturing process Lab Incharge.</br></br>NSS Coordinator.</br></br>Other Departmental works.</span></p>
-
-    <span class="btn btn-info" onclick="readMore('.m4');">Read more</span>
-                    </div>
-                </div>
+        <div class="row link p-0 m-0">
+            <div class="col-sm-6 p-0">    
+            <h1>CSE-&-IT</h1>
+                <picture>
+  <source type="image/webp" srcset="https://drive.google.com/uc?export=view&id=1LWEoKanw_Au0WR__zj-1RfhE7Vkj8hF6">
+  <img src="https://drive.google.com/uc?export=view&id=1LB846nmP7xzoX8biLNinETrBA41mbr3l" class="img-fluid h-100" alt="what is computer science">
+</picture>
             </div>
             
-            <div class="col my-4">
-                <div class="card h-100 m7">
-                <div class="card-header">
-                
-                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/saad%20photo.jpg" class="card-img-top img-fluid" alt="...">
-                    <h4 class="card-title">Saad Chowdhary</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p>
-                    <p class="card-text"><strong>Email : </strong><small>saadchowdhary@gmail.com</small></p>
-                    
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Bio.</h3>
-<p class="card-text">M.TECH from PDA College Of Engineering & Technology-2016.</br></br>B.TECH from Khaja Banda Nawaz College Of Engineering-2014.</p><h3 class="card-title">Conference</h3><p>National Conference on Analysis, Design, Optimization, Manufacturing and Simulation organized by Department of Mechanical engineering Basavakalyan engineering college, Bidar.<span class="less">...</span></p><div class="more"><p class="card-text">National conference on emerging trends in Engineering and Technology (ETET-2016) in NSAKCET.</p>
-<h3 class="card-title">Achivements</h3><p class="card-text">Casting Simulation of Valve Body Using ADSTEFAN SIMULATION.</br></br>Optimization Of Gating System And Risering System For Casting Of Valve Body Using ASTEFAN Simulation Software.</p></div>
-
-    <span class="btn btn-info" onclick="readMore('.m7');">Read more</span>
-                    </div>
-                </div>
+            <div class="col-sm-6 p-0">    
+            <h1>CIVIL</h1>
+            <picture>
+  <source type="image/webp" srcset="https://drive.google.com/uc?export=view&id=1MG5MBJ6RpMjsOn1KgC2MZgjr5F8N2lJP">
+<img src="https://drive.google.com/uc?export=view&id=1MhrdDVCB9BE5g5werUCdfCO04l7fuPGk" class="img-fluid h-100" alt="what is civil engineering">
+</picture>
             </div>
-            
-            <div class="col my-4">
-                <div class="card h-100 m5">
-                <div class="card-header">
-                
-                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/syed%20zakiuddin.jpg" class="card-img-top img-fluid" alt="...">
-                    <h4 class="card-title">Mr. Syed Zaki Uddin</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p>
-                    <p class="card-text"><strong>Email : </strong><small>syedzaki03@gmail.com</small></p>
-                    
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Achivements</h4>
-<p class="card-text">Guided B. Tech major project on fabrication of a working COMPRESSED AIR ENGINE for 2011-15 batch Students.<span class="less">...</span> <span class="more"></br></br>Guided a team of students of 2013-17 batch in fabrication of go-kart and participated in international go- karting event INTERNATIONAL SERIES OF KARTING-2016(ISK-2K16) held at Hyderabad and achieved a position in All India top 10 finalist.</span></p>
-
-    <span class="btn btn-info" onclick="readMore('.m5');">Read more</span>
-                    </div>
-                </div>
+            <div class="col-sm-6 p-0">    
+            <h1>MECHANICAL</h1>
+            <picture>
+  <source type="image/webp" srcset="https://drive.google.com/uc?export=view&id=1M39Qv_SaW9t7mFtEFXoQCyJ29bifVxhA">
+  <img src="https://drive.google.com/uc?export=view&id=1CMfy99csmHzFgwrAemm-UyB7X3jiTA92" class="img-fluid h-100" alt="...">
+</picture>
             </div>
-            
-            <div class="col my-4">
-                <div class="card h-100 m6">
-                <div class="card-header">
-                
-                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/Syed%20Sibghatullah%20Hussaini%20Quadri%20photo.jpg" class="card-img-top img-fluid" alt="...">
-                    <h4 class="card-title">Mr. Syed Sibghatullah Hussaini Quadri</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p><p>
-                    <p class="card-text"><strong>Email : </strong><small>sibghat.hussaini@gmail.com</small></p>
-                    
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Key-Responsiblities.</h4>
-<p class="card-text">Lectures to both B.tech and Diploma.<span class="less">...</span><span class="more"></br></br>Supervise B.tech Students, Internship and Research/Project work.</br></br>ICS Lab Incharge.</br></br>Other Departmental works</p>
-    <span class="btn btn-info" onclick="readMore('.m6');">Read more</span>
-                    </div>
-                </div>
+            <div class="col-sm-6 p-0">    
+            <h1>EEE</h1>
+            <picture>
+  <source type="image/webp" srcset="https://drive.google.com/uc?export=view&id=1LY4mOnufrUDjM09pQ09Z5litbhwubkp3">
+  <img src="https://drive.google.com/uc?export=view&id=1CMfy99csmHzFgwrAemm-UyB7X3jiTA92" class="img-fluid" alt="...">
+</picture>
             </div>
-            
-            <div class="col my-4">
-                <div class="card h-100">
-                <div class="card-header">
-                
-                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/Salman%20-Qudri.jpg" class="card-img-top img-fluid" alt="...">
-                    <h4 class="card-title">Mr. Salman Shah Quadri</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>ME</p><p>
-                    <p class="card-text"><strong>Email : </strong><small>salmanshahquadri@gmail.com</small></p>
-                    
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Key-Responsiblities.</h4>
-<p class="card-text">Exam Branch Coordinator from dept, National Service Scheme Coordinator</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col my-4">
-                <div class="card h-100">
-                <div class="card-header">
-                
-                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/nasullah.jpg" class="card-img-top img-fluid" alt="...">
-                    <h4 class="card-title">Dr. Mohammed Nasrullah</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Professor</p><p class="card-text"><strong>Qualification : </strong>Ph.D</p>
-                    <p class="card-text"><strong>Email : </strong><small>nasrul53@gmail.com</small></p>
-                    
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Achivements</h4>
-<p class="card-text">Doctor of Phylosophy in 2016</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col my-4">
-                <div class="card h-100">
-                <div class="card-header">
-                
-                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/amer_mech.jpg" class="card-img-top img-fluid" alt="...">
-                    <h4 class="card-title">Mr. Syed Amer Ur Rahman</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p>
-                    <p class="card-text"><strong>Email : </strong><small>amersyed6@gmail.com</small></p>
-                    
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Achivements</h4>
-<p class="card-text">Presented and participated a paper on ANALYSIS OF HYPERSONIC SCRAMJET ENGINE WITH MAC NO 4 in ETET,NSAKCET 2016 conference.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col my-4">
-                <div class="card h-100">
-                <div class="card-header">
-                
-                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/BAYAZEED%20ALI%20KHAN%20PAN%20AADHAR%20PHOTO.jpg" class="card-img-top img-fluid" alt="...">
-                    <h4 class="card-title">Mr. Bayazeed Ali Khan</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>MBA</p>
-                    <p class="card-text"><strong>Email : </strong><small>bayazeedkhan@yahoo.com</small></p>
-                    
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Achivements</h4>
-<p class="card-text">worked as a associate professor in Green Fort Engineering College ,2013-2015.ystem Analyst-PAC computer,san francisco USA-2000-2005 S Director Shadan Institute of management hyd 1996-2000</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col my-4">
-                <div class="card h-100">
-                <div class="card-header">
-                
-                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/syed%20sadat%20photo%20.jpg" class="card-img-top img-fluid" alt="...">
-                    <h4 class="card-title">Mr. Syed Sadath Ali</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p>
-                    <p class="card-text"><strong>Email : </strong><small>sadatali86@gmail.com</small></p>
-                    
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Achivements</h4>
-<p class="card-text">Dynamic Analysis of suspension system using FE Method” (IJESC) </br>FE analysis of evolution of defects during rolling. (IJERT)</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col my-4">
-                <div class="card h-100">
-                <div class="card-header">
-                
-                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/mansoor%20hassan%20mech%20photo.jpg" class="card-img-top img-fluid" alt="...">
-                    <h4 class="card-title">Mr. Md. Mansoor Hassan</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p>
-                    <p class="card-text"><strong>Email : </strong><small>mansoorhk24@gmail.com</small></p>
-                    
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Achivements</h4>
-<p class="card-text">Investigation of mechanical properties of friction stir welded alloy of 6082(IJERT).</br>Dynamics analysis of suspension system using FE method(IJESC).</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col my-4">
-                <div class="card h-100">
-                <div class="card-header">
-                
-                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/umair%20photo.jpg" class="card-img-top img-fluid" alt="...">
-                    <h4 class="card-title">Mr. Mohammed Umair Hamid</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p>
-                    <p class="card-text"><strong>Email : </strong><small>umair16890@gmail.com</small></p>
-                    
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Achivements</h4>
-<p class="card-text">Research and Publication: Analysis of hypersonic scramjet engine with a starting Mach number of 4, National Conference - ETET 2016, NSAKCET, HYD.</p>
-                    </div>
-                </div>
-            </div>
-            
-            
             
         </div>
+                
+                <div id="why-us-fct" class="row p-0 m-0">
+        <div id="fct-img" class="col-sm-4 p-0">
+                <img src="https://drive.google.com/uc?export=view&id=1PG5STFWMEsSUahK000Mq6oNxRGXjKOtD" class="img-fluid h-100" alt="...">
+
+         </div>
+        
+        
+                <div  class="col-sm-8 p-4 para">
+                <h1>Our Faculty</h1>
+                <p>We have experienced and enthusiast faculty, having master's and p.hd's in their respected Fields. They got enough skill set and know their duty well. They aren't only knowledgeable in the present technology but also quite active about the future technologies.<br/></br>There responsibility is to nourish, develop and evolve their students as well as grow with them and to pass down their knowledge and techniques.</br>And not to mention We have a Caring and loving  faculty, who are kind towards their students.</br>Being a student of Nawab Shah You will never hear a no, from our faculty. They're always there to listen to your queries, solve your problems and clear your doubts.</p>
+                </div>
+                
+                </div>
+                    
+            <div id="library" class="row p-0 m-0">
+        <div id="why-img" class="col-sm-4 p-0">
+               <img src="https://drive.google.com/uc?export=view&id=1QENQ803BJVzIAoE5ZjNR1U06KBocgzUY" class="m-0" alt="...">
+         </div>
+        
+        
+                <div class="col-sm-8 p-4 para">
+                <h1>Library</h1>
+                <p>We give equal importance to both theory and practice. Our Laboratories for all the departments are well-equipped and state of the art and in sync with the JNTU syllabus taught. There is provision to expand the facilities as per future requirements. We encourage the students to undertake a methodical approach to the collection and analysis of data through laboratory assignments apart from giving proper emphasis to appropriate presentation of the results.</br></br>We provide one dedicated computer terminal for each student. Further, for individual attention, adequate numbers of computer programmers are appointed for laboratory class. Each discipline's laboratory has sufficient number of equipment, test instruments and trainer kits to limit up to two students for each working bench.</p> 
+</p>
+                </div>
+                
+                </div>
+                
+            
+            
+        
     </div>
-        <script src="./mechanicalFaculty.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <!--     <img src="https://drive.google.com/uc?export=view&id=1AyaKWz2NHoOynF7KmKv67zQ2tDBKyY4T">
+       
+       <div class="Container">
+       
+       <div id="turn"><h1>Please Turn Your Device!...</h1></div> -->
+    
+    <!-- JS, Popper.js, and jQuery -->  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+    
+    
+    
+    <footer class="footer pb-2">
+    <div id="stmp" class="row m-0 p-4">
+    <div id="course-stmp" class="col-lg-6">
+        <h2>Course</h2><hr style="background-color:#d4af37">
+        <div id="course-submenu-stmp">
+            <a>CSE & IT</a>
+            <a>CIVIL</a>
+            <a>MECHANICAL</a>
+            <a>EEE</a>
+        </div>
+    </div>
+    
+    <div id="faculty-stmp" class="col-lg-6">
+        <h2>Faculty</h2><hr style="background-color:#d4af37">
+        <div id="faculty-submenu-stmp">
+            <a>CSE & IT Department</a>
+            <a>CIVIL Department</a>
+            <a>MECHANICAL Department</a>
+            <a>EEE Department</a>
+        </div>
+    </div>
+    </div>
+    
+    <div id="email-ctr">
+    <form id="newsletter-form">
+    <input name="email" type="email" id="email" placeholder="example@gmail.com" autocomplete required>
+    <button id="email-btn" form="newsletter-form" type="submit">Subscribe</button>
+    
+   <label id="lb" for="email">Subscribe to our News letter</label>
+    </form>
+    </div>
+    <div id="icons" class="my-4">
+   <a href="#EEE"><i class="fab fa-facebook fa-lg" style="color:blue; cursor:pointer;"></i></a>
+     <i class="fab fa-instagram-square fa-lg" style="color:violet"></i>
+     <i class="fab fa-linkedin fa-lg" style="color:skyblue"></i>
      
+     </div>
+    
+        <div id="contact">
+        <h2>Contact</h2><hr>
+        <h5>Address : </h5><p class="add-grey">16-4-1, New Malakpet,</br>Near  Malakpet Railway Station, Hyderabad, INDIA.</p></br><h5>Tel : </h5><p class="add-grey">040 - 24561118, 24066894.</p></br><h5>Email : </h5><p class="add-grey">info@nsakcet.ac.in</p>
+        </div>
+        
+        
+     <div id="cprt" class="text-center p-4">
+     <p>Copyright © 2008 - 2021 <span style="color:#999900">Nawab Shah  Alam Khan College Of Engineering And Technology...</span></p></div>
+     </footer>
+    
     </body>
 </html>
