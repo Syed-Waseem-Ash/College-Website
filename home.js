@@ -11,7 +11,7 @@ function iconToggle(icon,drop)
     $(icon).toggleClass("alter-icon");
     $(drop).stop().slideToggle(500);
 }
-
+/*
 function height()
 {
   var height = $("#header").outerHeight();
@@ -21,7 +21,7 @@ function height()
   $(".footer").offset({top:fh});
   
 }
-
+*/
 
 $(function ()
 { 
