@@ -63,7 +63,7 @@ onEnter: batch => {gsap.from(batch, {y:100,  stagger: .1, overwrite: true}); gsa
  
  onEnterBack: batch => /*{ gsap.from(batch, { x :-100,  stagger: 0.15, overwrite: true}); */gsap.to(batch ,{x:0,y:0,opacity :1, overwrite :true , stagger :.1}), 
  
- onLeaveBack: batch => gsap.to(batch, {opacity :0,y:100,  overwrite: true, stagger :.1}), start: "10% bottom", end: "bottom " + (endd + 50)}); 
+ onLeaveBack: batch => gsap.to(batch, {opacity :0,y:100,  overwrite: true, stagger :.1}), start: "10% bottom", end: "bottom " + (endd + 70)}); 
  ScrollTrigger.addEventListener("refreshInit", () => gsap.set("img", {opacity  :1,x: 0})); 
  
     
