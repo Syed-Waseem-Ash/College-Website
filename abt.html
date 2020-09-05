@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home page</title>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+          
+          <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
+    
+          <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400&display=swap" rel="stylesheet">
+          
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+       
+        <style>
+            *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body
+{
+    background-color:#fffff0;
+    min-height:100%;
+    min-width:100%;
+   /* padding-bottom:100px; */
+    
+}
+
+/*
+#turn
+{
+    display:none;
+    width:100%;
+    height:100%;
+    z-index:99;
+    color:red;
+    text-align:center;
+    vertical-align:center;
+    background-color:white;
+    position:fixed;
+    left:0;
+    top:0;
+}
+
+@media (orientation : landscape)
+{
+    #turn{display:block ;}
+}*/
+
+#header
+{
+    
+    display:block;
+    background:linear-gradient(to bottom right,skyblue,violet);
+    padding:8px;
+    background:#F8F8FF;
+  /*  height:150px; */
+}
+
+#header h5
+{
+    font-family:'old standard tt', Blippo, fantasy;
+    color:#8A9A5B;
+    position:relative;
+    font-size:28px;    
+    
+}
+
+#header p
+{
+    color:grey;
+    font-family:vollkorn, Blippo, fantasy;
+}
+/*
+#header h5::before
+{
+    content:"tyh";
+    background-image:url("https://drive.google.com/uc?export=view&id=1DuIP2hKwUmQeO32QkheLxttLyWkbL9f_");
+    background-size:80px 80px;
+    position:absolute ;
+    left:-35px;
+    z-index:99999999;
+}
+
+*/
+#nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+#nav a
+{
+    padding:10px;
+    margin:3px;
+    text-decoration:none;
+    color:grey;
+    cursor:pointer;
+    border-radius:4px;
+    font-family: spectral,'Times New Roman',Times, serif;
+    font-size:17px;
+}
+
+#menu a{
+    text-decoration:none;
+    color:grey;
+    font-weight:500;
+    font-family: vollkorn, Blippo, serif;
+    font-size:18px;
+    padding:10px;
+    margin:10px;
+    border-radius:5px;
+    position:relative;
+    display:block;
+}
+
+#nav a:hover
+{
+    color:violet;
+    background:rgba(125,155,157,0.5);
+    text-shadow:1px 1px 5px grey;
+}
+
+.drop-icon:hover a, #menu a:hover
+{
+    background:rgba(125,155,157,0.5);
+    color:#ff8000;
+}
+#menu
+{
+    position:fixed;
+    width:100%;
+   /* left:0;
+    top:100px; */
+    padding-bottom:150px;
+    background:#fffeea;
+    display:none;
+    z-index:99999;
+    overflow:scroll;
+}
+
+
+#ham-X
+{
+    width:30px;
+    height:30px;
+    border:1px Solid violet;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    cursor:pointer;
+    transition:all 0.5s ease-in-out;
+    border-radius:2px;
+}
+
+#hamburger{
+    
+    width:80%;
+    height:2px;
+    border-radius:2px;
+    background:grey;
+    box-shadow:0 0 2px 1px violet;
+    transition:all 0.5s ease-in-out;
+
+
+}
+
+#hamburger::before, #hamburger::after{
+    content:"";
+    width:80%;
+    height:2px;
+    border-radius:2px;
+    background:grey;
+    position:absolute;
+    box-shadow:0 0 2px 1px violet;
+    transition:all 0.5s ease-in-out;
+}
+
+#hamburger::before{
+    transform:translateY(-7px);
+}
+
+#hamburger::after{
+    transform:translateY(7px);    
+}
+
+.open #hamburger::before
+{
+    transform:rotate(45deg) translate(17px,-17px);
+}
+
+.open #hamburger::after
+{
+    transform:rotate(-45deg) translate(17px,17px);
+}
+
+.open #hamburger
+{
+    background:transparent;
+    box-shadow:none;
+    margin-left:-50px;
+}
+#msg
+{
+    width:20em;
+    height:24em;
+    left:50%;
+    top:50%;
+    border-radius:16px;
+    background-color:skyblue;
+    position: fixed;
+    transform:translate(-50%,-50%);
+    z-index:99999;
+    box-shadow:0 0 17px 1px red;
+    overflow:scroll;
+    display:none;
+}
+
+#msgg
+{
+    position:relative;
+    margin:10px;
+    font-family:serif;
+}
+
+.sub
+{
+    display:none;
+    background-color:whiteSmoke;
+}
+
+#menu .sub a { font-size:16px; }
+
+
+.drop-icon {  position:relative; }
+
+.drop-icon  svg
+{
+    position:absolute; 
+    top:50%;
+    right:10%;
+    transform:translateY(-50%);
+}
+.up { display:none; }
+.alter-icon .down{ display:none; }
+.alter-icon .up{ display:block; }
+
+/* -------------- header-end ----------- */
+
+
+
+
+/* ------------ Footer ---------------- */
+
+.footer
+{
+    min-width:100vw;
+    min-height:100vh;
+    background-color:#fffacd;
+    position:relative;
+}
+
+#icons
+{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    max-width:550px;
+    position:relative;
+    left:50%;
+    transform:translateX(-50%);
+
+}
+
+
+#newsletter-form button
+{
+    border:none;
+    padding:8px;
+    background:red;
+    border-radius:0 5px 5px 0;
+    border:2px solid grey;
+    font-family: vollkorn,Times, serif;
+    position:relative;
+}
+
+#newsletter-form button:hover
+{
+    background:grey;
+    box-shadow:0 0 4px 1px violet;
+}
+
+#newsletter-form input
+{
+    padding:8px;
+    margin-top:16px;
+    border:2px solid grey;
+    border-radius:5px 0 0 5px;
+    outline:none;
+    font-family:spectral, Monaco, sans-serif;
+    position:relative;
+
+}
+
+#newsletter-form input:hover
+{
+    border:2px solid violet;
+}
+
+#newsletter-form label
+{
+    color:#d4af37;
+    font-weight:500;
+    margin-left:8px;
+    margin-top:8px;
+    font-size:24px;
+    display:block;
+    font-family: vollkorn, Florence, cursive;
+    position:relative;
+}
+
+#contact
+{
+    padding:16px;
+    font-family:nunito, "Courier New", Courier, monospace;
+    background-color: #5B6467;
+    background-color:#7285a5;
+
+}
+
+#contact h5{font-family:vollkorn, Blippo, fantasy;
+}
+
+#contact h2
+{
+    font-family:'old standard tt',Blippo, fantasy;
+    color:#fffff0;
+}
+
+#email-ctr
+{
+    display:flex;
+    justify-content:center;
+}
+
+#cprt
+{
+    font-family:'old standard tt', Times, serif;
+    background:#fffacd;
+}
+
+
+#course-stmp,#faculty-stmp
+{
+    color:#d4af37;
+    font-family:serif;
+    margin:16px;
+}
+
+#stmp a
+{
+    display:block;
+    font-family:'old standard tt', "Palatino Linotype", "Book Antiqua", Palatino, sans-serif;
+    line-height:32px;
+    color:#996515;
+}
+
+
+/* -------------- Footer-end ----------- */
+
+
+
+
+
+
+
+
+
+@media (min-width:630px)
+{
+
+    #logo
+    {
+        display:flex;
+        flex-direction:row;
+        align-items:bottom;
+        padding:16px 8px 16px 8px;
+    }
+    
+    #logo p
+    {
+        margin:8px 0 0 8px;
+    }
+}
+
+
+.card
+{
+    background-color: #edd812;
+    background-image: linear-gradient(315deg, #edd812, #c0a010);
+
+}
+
+.card p, .card ul li
+{
+    font-family: 'old standard TT', 'Times New Roman',Times,serif;
+    list-style:none;
+    margin:16px;
+}
+
+.card h1
+{
+    font-family: spectral, Florence, cursive;
+}
+
+#geo::before
+{
+    content:"";
+    width:100%;
+    height:40%;
+    border-radius:17px;
+    background:rgba(200,200,200,.1);
+    position:absolute;
+    z-index:-1;
+    transform:translate(-10%,-50%);
+}
+/*
+
+
+#geo
+{
+    background:violet;
+    width:100vw;
+    height:100vh;
+*/
+#since
+{
+   width:100vw;
+    background-image:url("https://drive.google.com/uc?export=view&id=1UCSHrgih23ylyGkIBfcTslMq2EnQnwqn");
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+/*
+#since{
+    background:#fff57f;
+    min-height:calc(100vh - 100px);
+}
+*/
+#since h1
+{
+    font-family: 'old standard tt', blippo, fantasy;
+    color:yellow;
+}
+
+#since p
+{
+    color:#fff;
+    font-family: nunito,"Courier New", Courier, monospace;
+}
+            
+        </style>
+        
+        
+         <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    
+    <script src="https://kit.fontawesome.com/d332accbf3.js" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
+        
+        
+    </head>
+    
+    
+    <body>
+        <div class="Container-fluid header-container">
+            <header>
+                <div class="fixed-top" id="header"><div id="logo"><h5>Nawab Shah Alam Khan</h5><p>College Of Engineering And Technology</p></div>
+            <nav id="nav">
+                <div id="ham-X">
+                    <div id="hamburger"></div>
+                </div>
+               <a href="#">Home</a>
+                <a href="http://www.nsakcet.ac.in/Home">Official Site</a>
+                <a href="#contact">Contact</a>
+            </nav></div>
+            
+            <div class="h-100" id="menu">
+                <div id="icon-course" class="drop-icon" onclick="iconToggle('#icon-course','#coursee')">
+                    <a href="#" class="course">Course</a>
+                    <svg width="25" height="25" class="down">
+    <polyline style="color:black"
+        stroke-width:1; fill: none;"
+        points="10 10, 15 15, 20 10" />
+</svg>
+                    <svg width="25" height="25" class="up">
+    <polyline style="color:black"
+        stroke-width:1; fill: none;"
+        points="10 10, 15 5, 20 10" />
+</svg>
+                </div>
+                <div id="coursee" class="sub">
+                    <a href="./cc.html">CSE & IT</a>
+                    <a href="./mc.html">MECHANICAL</a>
+                    <a href="./cvs.html">CIVIL</a>
+                    <a href="./ec.html">EEE</a>
+                </div>
+                <div id="icon-faculty" class="drop-icon" onclick="iconToggle('#icon-faculty','#facultyy')">
+                    <a href="#" class="faculty">Faculty</a>
+                    <svg width="25" height="25" class="down">
+    <polyline style="color:black"
+        stroke-width:1; fill: none;"
+        points="10 10, 15 15, 20 10" />
+</svg>
+                    <svg width="25" height="25" class="up">
+    <polyline style="color:black"
+        stroke-width:1; fill: none;"
+        points="10 10, 15 5, 20 10" />
+</svg>
+                </div>
+                <div id="facultyy" class="sub">
+                    <a href="./cf.html">CSE &amp; IT Department</a>
+                    <a href="./mf.html">MECHANICAL Department</a>
+                    <a href="./cvf.html">CIVIL Department</a>
+                    <a href="./ef.html">EEE Department</a>
+                </div>
+                <div id="icon-campus" class="drop-icon" onclick="iconToggle('#icon-campus','#campuss')">
+                    <a href="#">Campus</a>
+                    <svg width="25" height="25" class="down">
+    <polyline style="color:black"
+        stroke-width:1; fill: none;"
+        points="10 10, 15 15, 20 10" />
+</svg>
+                    <svg width="25" height="25" class="up">
+    <polyline style="color:black"
+        stroke-width:1; fill: none;"
+        points="10 10, 15 5, 20 10" />
+</svg>
+                </div>
+                <div id="campuss" class="sub">
+                    <a href="./not.html">Classrooms</a>
+                    <a href="./not.html">Computer Labs</a>
+                        <a href="./not.html">MECHANICAL Workshops</a>
+                    <a href="./not.html">Seminar Hall</a>
+                    <a href="./not.html">Library</a>
+                    <a href="./not.html">Playing ground</a>
+                    <a href="./not.html">Parking Area</a>
+                </div>
+                <a href="./pl.html">Placement</a>
+                <a href="./abt.html">About</a>
+                <a href="./mp.html">Map</a>
+            </div>
+        </header>
+    </div>
+    
+    <div class="empty"></div>
+    
+    <div id="msg">
+                    <div id="msgg">
+                        <h1>Hey!</h1></br>
+                        <p><h3>You are Welcome.</h3></br><span>N</span>awab Shah Alam College of Engineering and Technology.</p>
+                    </div>
+                </div>
+    
+    
+    
+        <div class="container-fluid body">
+        
+        <div class="row m-0">
+           
+            <div class="card" id="history">
+            <h1 class="card-header">History</h1>
+            <p> 
+            This institution has been established under the aegis of MADARSA-I-AIZZA, a registered educational society registered on 28th December 1961 under the Hyderabad societies registration Act No. 1 of 1350 fosli. In fact the Madrasa-i-aizza was founded in the year 1876 AD by the efforts of Moulvi Shaik Ahmed Husain sahib, Nawab Rafi Yar Jung, with the express object of imparting liberal / scientific / professional education to the children of Muslim community.</br></br>In the year 1945, the school was made a feeder of the Osmania University preparing students for the H.S.C public examinations. The late Nawab Sir Nizamath Jung, an illustrious son of the founder was associated with the school as honorary secretary for over 50 years till he retired in 1947 and during his regime the school made rapid strides on the path of progress. Telugu medium classes were opened as parallel section in the year 1955. In 1964, English classes were opened and in the year 1987, a modern school in English medium with name ?Neo School Aizza? was established.</br></br>The year 1999 was a landmark in the history of the educational society when the management decided to start an engineering college in the educationally backward region of ADILABAD. The engineering college is functioning for the past 8 years very successfully. The college is one of the best engineering colleges imparting quality education with values. It is affiliated to Jawaharlal Nehru Technological University (JNTU) and approved by All India Council for Technical Education (AICTE).
+</p></div>
+
+<div class="card my-4" id="geo">
+<h1 class="card-header">Geography</h1><ul> <li>Located at Malakpet, heart of the city of Hyderabad.</li> <li>5 acres of sprawling campus with 50,000 sft of built up area.</li> <li>Well connected by train and RTC buses. Very close to Malakpet railway station and bus station.</li> <li>Laboratories with state-of the-art infrastructure.</li> <li>Well qualified and experienced faculty.</li> <li>Seminar halls for every department.</li> <li>Full fledged training and placements cell for industry readiness.</li> </ul>
+            </div>
+            
+<div class="card my-4" id="mission">
+<h1 class="card-header">Our Mission</h1>
+<ul> <li>To provide adequate knowledge encompassing strong technical concepts and soft skills thereby inculcating sound ethics.</li> <li >To provide a conducive environment to nurture creativity in teaching- learning process.</li> <li>To identify and provide facilities which create opportunities for deserving students of all communities to excel in their chosen fields.</li> <li>To strive and contribute to the needs of the society and the nation by applying advanced engineering and technical concepts.</li> </ul>
+            </div>
+            
+        </div>
+            
+            <div id="since" class="row p-4">
+            <div class="col-md-4 text-center">
+                <h1>11,000+</h1>
+                <p>students have Choosed Us.</p>
+            </div>
+            <div class="col-md-4 my-4 text-center">
+                <h1>700+</h1>
+                <p>Active Staff Members</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <h1>17+</h1>
+                <p>Successfull Years</p>
+            </div>
+        </div>
+            
+            
+        </div>
+        
+        <footer class="footer pb-2">
+    <div id="stmp" class="row m-0 p-4">
+    <div id="course-stmp" class="col-lg-6">
+        <h2>Course</h2><hr style="background-color:#d4af37">
+        <div id="course-submenu-stmp">
+            <a href="./cc.html">CSE & IT</a>
+            <a href="./cvs.html">CIVIL</a>
+            <a href="./mc.html">MECHANICAL</a>
+            <a href="./ec.html">EEE</a>
+        </div>
+    </div>
+    
+    <div id="faculty-stmp" class="col-lg-6">
+        <h2>Faculty</h2><hr style="background-color:#d4af37">
+        <div id="faculty-submenu-stmp">
+            <a href="./cf.html">CSE & IT Department</a>
+            <a  href="./cvf.html">CIVIL Department</a>
+            <a href="./mf.html">MECHANICAL Department</a>
+            <a href="./ef.html">EEE Department</a>
+        </div>
+    </div>
+    </div>
+    
+    <div id="email-ctr">
+    <form id="newsletter-form">
+    <input name="email" type="email" id="email" placeholder="example@gmail.com" autocomplete required>
+    <button id="email-btn" form="newsletter-form" type="submit">Subscribe</button>
+    
+   <label id="lb" for="email">Subscribe to our News letter</label>
+    </form>
+    </div>
+    <div id="icons" class="my-4">
+   <a href="#EEE"><i class="fab fa-facebook fa-lg" style="color:blue; cursor:pointer;"></i></a>
+     <i class="fab fa-instagram-square fa-lg" style="color:violet"></i>
+     <i class="fab fa-linkedin fa-lg" style="color:skyblue"></i>
+     
+     </div>
+    
+        <div id="contact">
+        <h2>Contact</h2><hr>
+        <h5>Address : </h5><p class="add-grey">16-4-1, New Malakpet,</br>Near  Malakpet Railway Station, Hyderabad, INDIA.</p></br><h5>Tel : </h5><p class="add-grey">040 - 24561118, 24066894.</p></br><h5>Email : </h5><p class="add-grey">info@nsakcet.ac.in</p>
+        </div>
+        
+        
+     <div id="cprt" class="text-center p-4">
+     <p>Copyright © 2008 - 2021 <span style="color:#999900">Nawab Shah  Alam Khan College Of Engineering And Technology...</span></p></div>
+     </footer>
+    
+    
+        <!-- JS, Popper.js, and jQuery -->  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        
+        
+        <script>
+            gsap.set("#logo",{opacity :0});
+
+
+/* -------- Sub-Menu -------- icon */
+function iconToggle(icon,drop)
+{
+    $(icon).toggleClass("alter-icon");
+    $(drop).stop().slideToggle(500);
+}
+
+
+
+$(function ()
+{  
+
+     var height = $("#header").outerHeight()
+  var fh = $(".body").offset().top + $(".body").outerHeight();
+ $("#menu").offset({top:height});
+ $(".body").offset({top:height});
+ $(".footer").offset({top:fh + height});
+ const endd = height + 50;
+ 
+ 
+    $("#ham-X").click(function ()
+    {
+      //  $(".menu").slideToggle(500);
+        //$("#ham-X")
+        $(this).toggleClass("open");
+        $("#menu").stop().animate({width : "toggle"},500);
+        
+        
+        if(!$(this).hasClass("open"))
+        {
+        $(".sub").css("display","none");
+        $(".drop-icon").removeClass("alter-icon");
+        }
+    });
+
+        
+    var hd = gsap.timeline();
+    
+    
+    hd.fromTo("#logo",{y : -100, opacity :0},{opacity:1,ease: "back.out" , y:0})
+    .fromTo("nav",{x : -100, opacity :0}, {x:0,opacity :1,  ease: "back.out"})
+    .fromTo("#ham-X",{x : -50, rotateZ: -120, opacity :0}, {x:0,opacity :1,  ease: "power4.out(1,0.1)" ,delay :-.4, rotateZ :0})
+    
+    
+    
+});          
+        </script>
+        
+        
+    </body>
+</html>
