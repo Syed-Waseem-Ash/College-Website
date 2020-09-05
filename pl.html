@@ -589,7 +589,7 @@ function iconToggle(icon,drop)
  var height = $("#header").outerHeight()
   var fh = $(".body").offset().top + $(".body").outerHeight();
  $("#menu").offset({top:height});
- $(".body").offset({top:height});
+ $(".body").offset({top:height + 16});
  $(".footer").offset({top:fh + height});
  const endd = height + 50;
  
