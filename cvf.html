@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home page</title>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+          
+          <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
+          
+          <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400&display=swap" rel="stylesheet">
+          
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./faculty.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    
+    <script src="https://kit.fontawesome.com/d332accbf3.js" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
+        
+        
+    </head>
+    
+    
+    <body>
+        <div class="Container-fluid header-container">
+            <header>
+                <div class="fixed-top" id="header"><div id="logo"><h5>Nawab Shah Alam Khan</h5><p>College Of Engineering And Technology</p></div>
+            <nav id="nav">
+                <div id="ham-X">
+                    <div id="hamburger"></div>
+                </div>
+               <a href="#">Home</a>
+                <a href="http://www.nsakcet.ac.in/Home">Official Site</a>
+                <a href="#">Contact</a>
+            </nav></div>
+            
+            <div class="h-100" id="menu">
+                <div id="icon-course" class="drop-icon" onclick="iconToggle('#icon-course','#coursee')">
+                    <a href="#" class="course">Course</a>
+                    <svg width="25" height="25" class="down">
+    <polyline style="color:black"
+        stroke-width:1; fill: none;"
+        points="10 10, 15 15, 20 10" />
+</svg>
+                    <svg width="25" height="25" class="up">
+    <polyline style="color:black"
+        stroke-width:1; fill: none;"
+        points="10 10, 15 5, 20 10" />
+</svg>
+                </div>
+                <div id="coursee" class="sub">
+                    <a href="#">CSE & IT</a>
+                    <a href="#">MECHANICAL</a>
+                    <a href="#">CIVIL</a>
+                    <a href="#EEE">EEE</a>
+                </div>
+                <div id="icon-faculty" class="drop-icon" onclick="iconToggle('#icon-faculty','#facultyy')">
+                    <a href="#" class="faculty">Faculty</a>
+                    <svg width="25" height="25" class="down">
+    <polyline style="color:black"
+        stroke-width:1; fill: none;"
+        points="10 10, 15 15, 20 10" />
+</svg>
+                    <svg width="25" height="25" class="up">
+    <polyline style="color:black"
+        stroke-width:1; fill: none;"
+        points="10 10, 15 5, 20 10" />
+</svg>
+                </div>
+                <div id="facultyy" class="sub">
+                    <a href="#">CSE Department</a>
+                    <a href="#">IT Department</a>
+                    <a href="#">MECHANICAL Department</a>
+                    <a href="#">CIVIL Department</a>
+                    <a href="#">EEE Department</a>
+                </div>
+                <div id="icon-campus" class="drop-icon" onclick="iconToggle('#icon-campus','#campuss')">
+                    <a href="#">Campus</a>
+                    <svg width="25" height="25" class="down">
+    <polyline style="color:black"
+        stroke-width:1; fill: none;"
+        points="10 10, 15 15, 20 10" />
+</svg>
+                    <svg width="25" height="25" class="up">
+    <polyline style="color:black"
+        stroke-width:1; fill: none;"
+        points="10 10, 15 5, 20 10" />
+</svg>
+                </div>
+                <div id="campuss" class="sub">
+                    <a href="#">Classrooms</a>
+                    <a href="#">Computer Labs</a>
+                        <a href="#">MECHANICAL Workshops</a>
+                    <a href="#">Seminar Hall</a>
+                    <a href="#">Library</a>
+                    <a href="#">Playing ground</a>
+                    <a href="#">Parking Area</a>
+                </div>
+                <a href="#">Placement</a>
+                <a href="#">Admission</a>
+                <a href="#">Map</a>
+            </div>
+        </header>
+    </div>
+    
+    <div class="empty"></div>
+    
+    <div id="msg">
+                    <div id="msgg">
+                        <h1>Hey!</h1></br>
+                        <p><h3>You are Welcome.</h3></br><span>N</span>awab Shah Alam College of Engineering and Technology.</p>
+                    </div>
+                </div>
+    
+    
+    
+        
+          <div class="container body">
+        <div class="row row-cols-1 row-cols-lg-2">
+
+           
+            <div class="col my-4">
+                <div class="card h-100 c1">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/image%20(69).jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Prof. Syed Farrukh Anwar</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Vice Principal and HOD</p><p class="card-text"><strong>Qualification : </strong>M.tech</p><p><strong>Membership : </strong> <span class="badge bg-danger">Member of Intitution of Engineers(India)</span></br><span class="badge bg-info">& International Association Of Engineers</span></p>
+                    <p class="card-text"><strong>Email : </strong><small>farrukhsde@yahoo.co.uk</small></p>
+                    
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Achivements</h4>
+<p class="card-text">Prof. Farrukh worked as Site Engineer from June 1983 to December 1984 in CCMB, Hyderabad.<span class="less">...</span>
+<span class="more"></br></br>Then he joined Madina Technical College, Hyderabad in January 1985 and worked as faculty and in-charge Principal till December 1987.</br>He was then inducted into the Telecom Department/BSNL in January 1988 and rendered services as Sub-Divisional Engineer/Divisional Engineer in the Civil Engineering wing of department.  </br></br>Successfully Completed a workshop on "I.C.engines" in October 2014 in Holy Mary Institution of Technology, Hyderabad.in Association with CYIENT Ltd.</br></br>
+He was involved in the design of 100 meters high RCC tower at Rajahmundry along with IIT Madras team.</br></br>    He was incharge of Civil and Structural Design works for entire Andhra Pradesh.</br></br>    He designed a six storey building at Madhapur to carry a 100 meter high microwave tower on its top.</br></br>    He was awarded honorarium a number of times for discharging duties over and above the assigned works.</br></br>He was very instrumental in establishing the labs of Civil Engineering Department at NSAKCET. He has a total of 15 research papers published in various National, International Journals and Conferences.</br></br>He delivered a number of seminars and guest lectures in various Engineering colleges across the state.</span></p>
+
+        <span class="btn btn-info" onclick="readMore('.c1');">Read more</span>
+        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col my-4">
+                <div class="card h-100">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/srivasreddy%20photo.jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Dr. Srinivassa Reddy Bussoli</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Professor</p><p class="card-text"><strong>Qualification : </strong>Ph.D</p>
+                    <p class="card-text"><strong>Email : </strong><small>reddybs1949@yahoo.com</small></p>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="col my-4">
+                <div class="card h-100">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/Dr.%20A.K.%20Asthana.jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Dr. Ashok Kumar Asthana</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Professor</p><p class="card-text"><strong>Qualification : </strong>Ph.D</p>
+                    <p class="card-text"><strong>Email : </strong><small>ashokasthana48@gmail.com</small></p>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="col my-4">
+                <div class="card h-100">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/Dr%20Ramesh%20Reddy%20photo.jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Dr. Ramesh Reddy</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Professor</p><p class="card-text"><strong>Qualification : </strong>Ph.D</p>
+                    <p class="card-text"><strong>Email : </strong><small>rameshrreddy@hotmail.com</small></p>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+                
+                <div class="col my-4">
+                <div class="card h-100">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/image%20(2).jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Mr. Khaja Mohiuddin</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p>
+                    <p class="card-text"><strong>Email : </strong><small>khajamohiuddin013@gmail.com</small></p>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="col my-4">
+                <div class="card h-100">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/img393.jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Mr. Mohd Azharuddin</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p>
+                    <p class="card-text"><strong>Email : </strong><small>mohdazhar990@gmail.com</small></p>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+                
+                <div class="col my-4">
+                <div class="card h-100">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/image%20(67).jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Mr. Syed Khaleelullah Shah Quadri</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p>
+                    <p class="card-text"><strong>Email : </strong><small>syedkhleel.2007@gmail.com</small></p>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+                
+                <div class="col my-4">
+                <div class="card h-100">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/image%20(68).jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Mr. Imtiyaz Qureshi</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p>
+                    <p class="card-text"><strong>Email : </strong><small>mohammed007imtiyaz@gmail.com</small></p>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="col my-4">
+                <div class="card h-100">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/moisan%20.jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Mr. Mohsin Kamran</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p>
+                    <p class="card-text"><strong>Email : </strong><small>kamranmdmohsin@gmail.com</small></p>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="col my-4">
+                <div class="card h-100">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/mohd%20toufeeq.jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Mr. Mohd Toufeeq</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p>
+                    <p class="card-text"><strong>Email : </strong><small>mohdtoufeeq141@gmail.com</small></p>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="col my-4">
+                <div class="card h-100">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/Javid_Civil.jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Mr. Shaik Mohammed Javid</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p>
+                    <p class="card-text"><strong>Email : </strong><small>Jvd9999@gmail.com</small></p>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+            
+                <div class="col my-4">
+                <div class="card h-100">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/aquil%20idphoto%20jntuh.jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Mr. Mohd Aquil</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p>
+                    <p class="card-text"><strong>Email : </strong><small>m.auqeel81@gmail.com</small></p>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="col my-4">
+                <div class="card h-100">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/20171025_111007.jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Mr. Shoeb Amer Ali Khan</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>ME</p>
+                    <p class="card-text"><strong>Email : </strong><small>shoaibkhan1392@gmail.com</small></p>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="col my-4">
+                <div class="card h-100">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/image%20(1).jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Mr. Mohammed Rafi</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p>
+                    <p class="card-text"><strong>Email : </strong><small>mohdrafi228@gmail.com</small></p>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="col my-4">
+                <div class="card h-100">
+                <div class="card-header">
+                
+                    <img src="http://www.nsakcet.ac.in/Administrator/FacultyImages/Alauddin2014%20high%20pix.jpg" class="card-img-top img-fluid" alt="...">
+                    <h4 class="card-title">Mr. Md Alauddin</h4><hr width="70%"> <p class="card-text"><strong>Profile: </strong>Assistant Professor</p><p class="card-text"><strong>Qualification : </strong>M.tech</p>
+                    <p class="card-text"><strong>Email : </strong><small>alauddinbinhafizul@gmail.com</small></p>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+                
+        </div></div>
+        
+        
+        <footer class="footer pb-2">
+    <div id="stmp" class="row m-0 p-4">
+    <div id="course-stmp" class="col-lg-6">
+        <h2>Course</h2><hr style="background-color:#d4af37">
+        <div id="course-submenu-stmp">
+            <a>CSE & IT</a>
+            <a>CIVIL</a>
+            <a>MECHANICAL</a>
+            <a>EEE</a>
+        </div>
+    </div>
+    
+    <div id="faculty-stmp" class="col-lg-6">
+        <h2>Faculty</h2><hr style="background-color:#d4af37">
+        <div id="faculty-submenu-stmp">
+            <a>CSE & IT Department</a>
+            <a>CIVIL Department</a>
+            <a>MECHANICAL Department</a>
+            <a>EEE Department</a>
+        </div>
+    </div>
+    </div>
+    
+    <div id="email-ctr">
+    <form id="newsletter-form">
+    <input name="email" type="email" id="email" placeholder="example@gmail.com" autocomplete required>
+    <button id="email-btn" form="newsletter-form" type="submit">Subscribe</button>
+    
+   <label id="lb" for="email">Subscribe to our News letter</label>
+    </form>
+    </div>
+    <div id="icons" class="my-4">
+   <a href="#EEE"><i class="fab fa-facebook fa-lg" style="color:blue; cursor:pointer;"></i></a>
+     <i class="fab fa-instagram-square fa-lg" style="color:violet"></i>
+     <i class="fab fa-linkedin fa-lg" style="color:skyblue"></i>
+     
+     </div>
+    
+        <div id="contact">
+        <h2>Contact</h2><hr>
+        <h5>Address : </h5><p class="add-grey">16-4-1, New Malakpet,</br>Near  Malakpet Railway Station, Hyderabad, INDIA.</p></br><h5>Tel : </h5><p class="add-grey">040 - 24561118, 24066894.</p></br><h5>Email : </h5><p class="add-grey">info@nsakcet.ac.in</p>
+        </div>
+        
+        
+     <div id="cprt" class="text-center p-4">
+     <p>Copyright © 2008 - 2021 <span style="color:#999900">Nawab Shah  Alam Khan College Of Engineering And Technology...</span></p></div>
+     </footer>
+    
+    
+        <!-- JS, Popper.js, and jQuery -->  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        
+        
+        <script src="./faculty.js"></script>
+    </body>
+</html>
