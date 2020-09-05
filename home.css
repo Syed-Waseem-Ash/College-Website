@@ -119,10 +119,10 @@ body
     width:100%;
    /* left:0;
     top:100px; */
-    padding-bottom:200px;
+    padding-bottom:150px;
     background:#fffeea;
     display:none;
-    z-index:99;
+    z-index:99999;
     overflow:scroll;
 }
 
