@@ -445,7 +445,7 @@ body
     backdrop-filter: blur(2px);
     border:2px solid white;
     padding:16px;
-    color:grey;
+    color:#fff;
 }
 
 
