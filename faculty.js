@@ -54,6 +54,8 @@ $(function ()
     start: "center bottom", end: "bottom " + endd});
         ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".card", {opacity :1,scale :1, x: 0}));
 
+$(".card-header img").attr("src","https://drive.google.com/uc?export=view&id=1b9z_ntzx7Hi3791xVh1tZT-StEwENKTD");
+
 });
 
 function readMore(profile)
